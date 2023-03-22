@@ -3,7 +3,7 @@
 ## Linear Regression Coefficients
 
 .![png](./Images/All%20Coefficients.png)
-![png](Images/Top 15 Largest Coefficients.png)
+.![png](./Images/Top%2015%20Largest%20Coefficients.png)
 
 - Outlet_Type_Supermarket Type 3, Outlet_Identifier_OUT027, and Outlet_Type_Supermarket Type 1 had the most impact on the model.
     - Outlet_Type_Supermarket Type 3: Being in the Type 3 Supermarket group increases the item outlet sales by 1457.01.
