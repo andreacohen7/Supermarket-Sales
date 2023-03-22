@@ -2,7 +2,7 @@
  
 ## Linear Regression Coefficients
 
-![png](http://localhost:8889/view/All%20Coefficients.png)
+![png](All Coefficients.png)
 ![png](Top 15 Largest Coefficients.png)
 
 - Outlet_Type_Supermarket Type 3, Outlet_Identifier_OUT027, and Outlet_Type_Supermarket Type 1 had the most impact on the model.
