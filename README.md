@@ -12,8 +12,8 @@
     
 ## Decision Tree Feature Importances
 
-![png](Images/All Feature Importances.png)
-![png](Images/Top 15 Most Important Features.png)
+.![png](./Images/All%20Feature%20Importances.png)
+.![png](./Images/Top%2015%20Most%20Important%20Features.png)
 
 - The 5 most important features were Item_MRP, Item_Visibility, Outlet_Identifier_OUT027, Outlet_Type_Supermarket Type1, and Outlet_Size.
 - These features are the most helpful features for this tree-based model to separate the data for predicting the item outlet sales.
