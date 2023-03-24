@@ -58,3 +58,92 @@
     - Outlet_Identifier_OUT027
         - The red values are on the right (positive). If the item is sold at Outlet OUT027, the model will predict higher sales.
         - The blue values are on the left (negative). If the item is sold at any other outlet, the model will predict lower sales.
+
+## Local Explanations
+
+### Item_MRP
+- The maximum retail price of an item was the most important feature for both SHAP and the model. It would be helpful to choose an item with low MRP and an item with high MRP.
+
+### Highest MRP
+
+#### Lime tabular explanation
+
+.![png](./Images/Lime_Explanation_Highest_MRP.png)
+
+- This item had a predicted outlet sales value of 3171.87.
+- This item had features associated with higher outlet sales:
+    - Item_MRP = 264.72 (> 179.52)
+    - Item_Type was not seafood or others
+    - Outlet_Size was medium
+    - Outlet_Identifier was not OUT018 or OUT045
+- This item also had features associated with lower outlet sales:
+    - Outlet_Identifier was not OUT027
+    - Outlet_Type was not Supermarket Type 1
+    - Item_type was not starchy food or breakfast
+- 6 of the top 10 most impactful features were associated with higher outlet sales, and 4 were associated with lower outlet sales.
+
+#### Individual Force Plot
+
+.![png](./Images/Individual_Force_Plot_Highest_MRP.png)
+
+- The base value is 2154.
+- The SHAP value is 3171.87.
+- The Item_MRP is the most important feature for this item, and it is pushing the prediction toward a higher value. The Item_MRP for this item is 264.7.
+- Outlet_Size and Item_Weight are also pushing the prediction toward a higher value.
+- The Outlet_Type_Supermarket and the Item_Type_Frozen Foods are pushing the prediction toward a lower value.
+
+### Lowest MRP
+
+#### Lime tabular explanation
+
+.![png](./Images/Lime_Explanation_Lowest_MRP.png)
+
+- This item had a predicted outlet sales value of 169.78.
+- This item had features associated with lower outlet sales:
+    - Outlet_Identifier was not OUT027
+    - Item_MRP = 32.36 (< 90.08)
+    - Item_Type was not soft drink or breakfast
+- This item also had features associated with higher outlet sales:
+    - Outlet_Type was Supermarket Type 1
+    - Item_Type was not seafood, breads, health and hygiene, or hard drinks
+    - Outlet_Size was high
+- 6 of the top 10 most impactful features were associated with higher outlet sales, and 4 were associated with lower outlet sales.
+
+#### Individual Force Plot
+
+.![png](./Images/Individual_Force_Plot_Lowest_MRP.png)
+
+- The base value is 2154.
+- The SHAP value is 169.78.
+- The Item_MRP is the most important feature for this item, and it is pushing the prediction toward a lower value. The Item_MRP for this item is 32.36.
+- Outlet_Identifier_OUT027 is also pushing the prediction toward a lower value.
+- The Outlet_Type_Supermarket Type 1 is pushing the prediction toward a higher value.
+
+### Outlet_Type_Supermarket Type 1
+- The type of outlet was among the most important features for both SHAP and the model. It would be helpful to choose an example from a Type 1 Supermarket.
+
+#### Lime tabular explanation
+
+.![png](./Images/Lime_Explanation_Supermarket_Type1.png)
+
+- This item had a predicted outlet sales value of 2451.48.
+- This item had features associated with lower outlet sales:
+    - Outlet_Identifier was not OUT027
+    - Outlet_Size was small
+    - Item_Type was not other, meat, bread, or seafood
+- This item also had features associated with higher outlet sales:
+    - Outlet_Type was Supermarket Type 1
+    - Item_MRP was 175.51 (> 140.43)
+    - Item_Type was not starchy foods
+    - Outlet_Identifier was not OUT019
+- 4 of the top 10 most impactful features were associated with higher outlet sales, and 6 were associated with lower outlet sales.
+
+#### Individual Force Plot
+
+.![png](./Images/Individual_Force_Plot_Supermarket_Type1.png)
+
+- The base value is 2154.
+- The SHAP value is 2451.48.
+- The Outlet_Type_Supermarket Type1 is the most important feature for this item, and it is pushing the prediction toward a higher value. The item is sold at a Supermarket Type1.
+- Item_MRP are Item_Typer_Fruits and Vegetables are also pushing the prediction toward a higher value.
+- The Outlet_Establishment_Year and the Outlet_Identifier are pushing the prediction toward a lower value.
